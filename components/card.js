@@ -16,9 +16,10 @@ export default function Portrait({ pokemon }) {
     return (
         <Link key={pokemon.name} href={'/' + pokemon.name}>
             <div className={styles.card}>
-                <Image src={pokemon.image} width={150} height={150} className={styles.img} />
+                <div className = {styles.imageBackground}>
+                    <Image src={pokemon.image} width={150} height={150} className={styles.img} />
+                </div>
                 <h3 className={styles.nome}>{pokemon.name}</h3>
-        
                 <span>
                     {result.types.map( (poke) => <p className={styles.type}>{poke.type.name}</p> )}
                 </span>

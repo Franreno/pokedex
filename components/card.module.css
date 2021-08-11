@@ -3,15 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #dbdbdb;
+    background: #EBE875;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-    width: 100%;
     border-radius: 4px;
     transition: all 500ms;
     overflow: hidden;
-    height: 25rem;
+    height: 22rem;
+    width: 100%;
 
     background-size: cover;
     background-position: center;
@@ -21,7 +21,17 @@
 .card:hover {
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
     transform: translateY(-3px) scale(1.025);
- }
+}
+
+
+
+.imageBackground{
+    background-color: white;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+
+}
 
 .img {
     height: 150;
@@ -29,9 +39,12 @@
 }
 
 .nome {
+    text-transform: capitalize; 
     color: black;
+    
 }
 
 .type {
     color: black;
+    
 }
