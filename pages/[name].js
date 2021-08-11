@@ -2,9 +2,9 @@ import Image from "next/image";
 import Layout from '../components/layout';
 import Link from "next/dist/client/link";
 import "../lib/pokemon";
-import { findEvolutionChainArray } from "../lib/pokemon";
+import { findEvolutionChainArray, findTypesInformation } from "../lib/pokemon";
 export const getStaticPaths = async () => {
-  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=3');
+  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=898');
   const data = await res.json();
   const pokemons = data.results;
 
@@ -29,31 +29,28 @@ export const getStaticProps = async (context) => {
   res = await fetch(specie.evolution_chain.url);
   const evolution = await res.json();
   const evolutionChainPokemons = await findEvolutionChainArray(evolution);
-  const types = [];
-  types = await pokemon.types.map(async type =>{
-    res = await fetch(type.url);
-    return await res.json();
-  });
+  const types =  await findTypesInformation(pokemon.types);
+
 
   return{
-    props: { pokemon: pokemon, evolutionChainPokemons: evolutionChainPokemons, types: types}
+    props: { types: types, evolutionChainPokemons: evolutionChainPokemons, pokemon: pokemon}
   }
 
 }
 
-const Detalhes = ({pokemon},{evolutionChainPokemons}) => {
+const Detalhes = (props) => {
   return (
     <Layout>
       <div>
-       <h1>{pokemon.name}</h1>
-        <p>Tipo: {pokemon.types.map(membro=>{
-                    return (membro.type.name+' ');
+       <h1>{props.pokemon.name}</h1>
+        <p>Tipo: {props.types.map(type=>{
+                    return (type.name+' ');
         })}</p>
-        <p>Peso: {pokemon.weight}</p>
-        <p>Altura: {pokemon.height}</p>
-        <Image src={pokemon.sprites.front_default} width={200} height={200}></Image>
+        <p>Peso: {props.pokemon.weight}</p>
+        <p>Altura: {props.pokemon.height}</p>
+        <Image src={props.pokemon.sprites.front_default} width={200} height={200}></Image>
         <p>Evoluções: </p>
-        {evolutionChainPokemons.map(pokemon => (
+        {props.evolutionChainPokemons.map(pokemon => (
             <div>
               <Link href={'/'+pokemon.name}>
                 <a>
