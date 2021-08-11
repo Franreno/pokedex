@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Layout from '../components/layout';
 import Link from "next/dist/client/link";
+
 export const getStaticPaths = async () => {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=898');
   const data = await res.json();
@@ -46,7 +47,10 @@ const Detalhes = ({pokemon}) => {
         <p>Altura: {pokemon.height}</p>
         <Image src={pokemon.sprites.front_default} width={200} height={200}></Image>
         <Link href="/">
-          <a>voltar</a>
+          <button>
+            <a>voltar</a>
+          </button>
+          
         </Link>
       </div>
     </Layout>
