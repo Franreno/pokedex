@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: rgb(233, 233, 233);
+  background-color: #75D6EB;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
@@ -11,6 +11,12 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  
+  text-align: center;
+  font-size: 3rem;
 }
 
 a {
