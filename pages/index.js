@@ -7,11 +7,9 @@ import Search from '../components/search';
 import Image from "next/image";
 import Card from '../components/card';
 import Grid from '../components/basic-grid';
-import PokeCardLayout from '../components/poke_card_layout';
-import { getPokemon } from './api/pokemon_api';
 
 export async function getStaticProps(context) {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=898`);
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=200`);
   const { results } = await res.json();
   const pokemons = results.map((result, index) => {
     const paddedId = ('00' + (index + 1)).slice(-3);
@@ -43,13 +41,7 @@ export default function Home({pokemons}) {
         <h1>POKEMONS</h1>
         <Grid>
           {pokemons.map(pokemon => (
-              <Card>
-                <Link key={pokemon.name} href={'/'+pokemon.name}>
-                  <a>
-                    <h3>{pokemon.name}</h3>
-                  </a>  
-                </Link>
-              </Card>
+              <Card pokemon={pokemon}/>
           ))}
         </Grid>
       </section>
