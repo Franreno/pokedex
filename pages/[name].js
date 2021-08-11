@@ -66,7 +66,10 @@ const Detalhes = (props) => {
         ))}
 
         <Link href="/">
-          <a>voltar</a>
+          <button>
+            <a>voltar</a>
+          </button>
+          
         </Link>
       </div>
     </Layout>

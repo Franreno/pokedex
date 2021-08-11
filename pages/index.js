@@ -1,9 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 import Search from '../components/search';
+import Image from "next/image";
+import Card from '../components/card';
+import Grid from '../components/basic-grid';
 import PokeCardLayout from '../components/poke_card_layout';
 import { getPokemon } from './api/pokemon_api';
 
@@ -23,8 +26,7 @@ export async function getStaticProps(context) {
 
 }
 
-export default function Home({ pokemons }) {
-
+export default function Home({pokemons}) {
   return (
     <Layout>
       <Head>
@@ -33,17 +35,27 @@ export default function Home({ pokemons }) {
 
       <main>
 
-        <Search />
-
+        <Search/>
 
       </main>
-      <section>
-        <h2>POKEMONS</h2>
-        {pokemons.map(pokemon => (
-          <PokeCardLayout name={pokemon} />
-        ))}
+
+      <section>        
+        <h1>POKEMONS</h1>
+        <Grid>
+          {pokemons.map(pokemon => (
+              <Card>
+                <Link key={pokemon.name} href={'/'+pokemon.name}>
+                  <a>
+                    <h3>{pokemon.name}</h3>
+                  </a>  
+                </Link>
+              </Card>
+          ))}
+        </Grid>
       </section>
 
     </Layout>
+
+
   )
 }
