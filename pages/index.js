@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Search from '../components/search';
 
 export async function getStaticProps() {
-  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=898');
+  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=3');
   const data = await res.json();
   const pokemons = data.results;
   return {
