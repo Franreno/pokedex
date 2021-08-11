@@ -6,11 +6,7 @@ import { findEvolutionChainArray, findTypesInformation } from "../lib/pokemon";
 
 
 export async function getStaticPaths() {
-  const countRes = await fetch('https://pokeapi.co/api/v2/pokemon/')
-  const countData = await countRes.json()
-  const count = countData.count
-
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${count}/`);
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=898`);
   const data = await res.json();
 
   const paths = data.results.map((pokemon) => ({
