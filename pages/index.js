@@ -4,14 +4,28 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Layout from '../components/layout'
 import Search from '../components/search';
+import PokeCardLayout from '../components/poke_card_layout';
+import { getPokemon } from './api/pokemon_api';
 
-export async function getStaticProps() {
-  const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=3');
-  const data = await res.json();
-  const pokemons = data.results;
-  return {
-    props: { pokemons: pokemons }
+export async function getStaticProps(context) {
+  try {
+    const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10');
+    const {results} = await res.json();
+    const pokemons = results.map( (result, index) => {
+      const paddedId = ('00' + (index + 1)).slice(-3);
+
+      const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
+      return { ...result, image };
+    })
+    
+    return {
+      props: {pokemons},
+    };
+    
+  } catch (err) {
+    console.error(err);
   }
+
 }
 
 export default function Home({pokemons}) {
@@ -19,7 +33,7 @@ export default function Home({pokemons}) {
   return (
     <Layout>
       <Head>
-        <title>Meu app</title>
+        <title>Pokedex</title>
       </Head>
 
       <main>
@@ -31,14 +45,7 @@ export default function Home({pokemons}) {
       <section>
         <h2>POKEMONS</h2>
           {pokemons.map(pokemon => (
-            <div key={pokemon.name}>
-              <Link key={pokemon.name} href={'/'+pokemon.name}>
-                <a>
-                  <h3>{pokemon.name}</h3>
-                </a>  
-              </Link>
-
-            </div>
+            <PokeCardLayout name={pokemon}/>
           ))}
       </section>
 
