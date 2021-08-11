@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 import Layout from '../components/layout'
+import Search from '../components/search';
 
 export async function getStaticProps() {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=3');
@@ -10,7 +13,9 @@ export async function getStaticProps() {
     props: { pokemons: pokemons }
   }
 }
+
 export default function Home({pokemons}) {
+
   return (
     <Layout>
       <Head>
@@ -19,14 +24,8 @@ export default function Home({pokemons}) {
 
       <main>
 
-        <h1>
-            <Link href="/posts/first-post">
-              <a>MIM CLICA</a>
-            </Link>
-        </h1>
-        <h2>
-          <p>Textin só pra dizer que existe alguma coisa e não ficar vazio</p>
-        </h2>
+    <Search/>
+
 
       </main>
       <section>

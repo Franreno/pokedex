@@ -2,7 +2,9 @@ import Image from "next/image";
 import Layout from '../components/layout';
 import Link from "next/dist/client/link";
 import "../lib/pokemon";
+
 import { findEvolutionChainArray, findTypesInformation } from "../lib/pokemon";
+
 export const getStaticPaths = async () => {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=898');
   const data = await res.json();
@@ -10,7 +12,7 @@ export const getStaticPaths = async () => {
 
   const paths = pokemons.map(pokemon => {
     return {
-      params : {name: pokemon.name}
+      params: { name: pokemon.name }
     }
   })
 
@@ -19,6 +21,7 @@ export const getStaticPaths = async () => {
     fallback: false
   }
 }
+
 
 export const getStaticProps = async (context) => {
   const name = context.params.name;
@@ -31,9 +34,9 @@ export const getStaticProps = async (context) => {
   const evolutionChainPokemons = await findEvolutionChainArray(evolution);
   const types =  await findTypesInformation(pokemon.types);
 
-
   return{
     props: { types: types, evolutionChainPokemons: evolutionChainPokemons, pokemon: pokemon}
+
   }
 
 }
@@ -60,6 +63,7 @@ const Detalhes = (props) => {
 
             </div>
           ))}
+
         <Link href="/">
           <a>voltar</a>
         </Link>
