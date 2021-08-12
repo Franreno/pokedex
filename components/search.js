@@ -3,7 +3,6 @@ import { Button, TextField } from '@material-ui/core';
 import { useRouter } from "next/router";
 import { useState } from 'react';
 
-
 export default function Search() {
     const [data, setData] = useState(null);
     const router = useRouter();
@@ -26,8 +25,16 @@ export default function Search() {
     }
 
     return (
-        <div className={styles.container}>
-            <TextField variant="outlined" label="Nome do Pokemon" onChange={handleTextChange} onKeyPress={handleEnterPress} className={styles.TextField}/>
+        <div>
+            <TextField 
+                color="primary"
+                id="standard-basic"
+                label="Nome do Pokemon" 
+                onChange={handleTextChange} 
+                onKeyPress={handleEnterPress} 
+                className={styles.TextField}
+                
+            />
             <Button variant="contained" onClick={GoToPokemonPage} className={styles.Button} >Search</Button>
         </div>
     )

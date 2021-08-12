@@ -1,0 +1,26 @@
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    opacity: 85%;
+    background-color: black;
+    width: 100%;
+    height: 7rem;
+    z-index: 1;
+    /*z index 11*/
+}
+
+.boxSearch {
+    height: max-content;
+    margin-right: 2rem;
+    vertical-align: middle;
+}
+
+.portrait {
+    height: max-content;
+    vertical-align: middle;   
+    margin-left: 2rem;
+    opacity: 100%;
+}
