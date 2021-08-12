@@ -12,11 +12,20 @@
 }
 
 .mainPokeImg {
+    display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+.mainPokeImgBackground {
     background-color: white;
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
+}
+
+.mainDiv {
+    text-align: center;
 }
 
 .EvolutionCard{
@@ -24,13 +33,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+
     background: lightcyan;
+    
     font-size: 1rem;
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     border-radius: 15px;
     transition: all 500ms;
     overflow: hidden;
+    
     height: 12rem;
+    width: 20rem;
 
     background-size: cover;
     background-position: center;
@@ -39,7 +54,7 @@
 }
 
 .evGrid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }

@@ -16,10 +16,12 @@ export default function SingularPokeCard({ props }) {
 
 
     return (
-        <div>
+        <div className={styles.mainDiv}>
             <h1>{pokemon.name}</h1>
             <div className={styles.mainPokeImg}>
-                <Image src={MainPokemonImage(pokemon.id)} width={215} height={215} />
+                <div className={styles.mainPokeImgBackground}>
+                    <Image src={MainPokemonImage(pokemon.id)} width={215} height={215} />
+                </div>
             </div>
             <p>Tipo: {types.map(type => {
                 return (type.name + ' ');
@@ -28,8 +30,8 @@ export default function SingularPokeCard({ props }) {
             <p>Altura: {pokemon.height}</p>
             
             
-            <p>Evoluções: </p>
             <div className={styles.evGrid}>
+            <p>Evoluções: </p>
             {evolutionChainPokemons.map((_pokemon, index) => (
                 <div className={styles.EvolutionCard}>
                     <Link href={'/' + _pokemon.name}>

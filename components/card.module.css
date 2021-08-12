@@ -12,6 +12,7 @@
     overflow: hidden;
     height: 22rem;
     width: 100%;
+    cursor: pointer;
 
     background-size: cover;
     background-position: center;
@@ -33,16 +34,15 @@
 }
 
 .cardTipos{
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
 }
 
 .nome {
     text-transform: capitalize; 
     color: black;
-    
 }
 
 .type {

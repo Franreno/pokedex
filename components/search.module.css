@@ -1,13 +1,10 @@
-.container {
-    max-width: 36rem;
-    padding: 0 1 rem;
-    margin: 3rem auto 6rem;
+.searchBar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
-.Button {
-    font-size: 5vh;
-}
-
-.TextField {
-    font-size: 4vh;
+.searchBar>* {
+    margin: 5rem;
 }
