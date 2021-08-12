@@ -4,6 +4,7 @@ import Link from "next/dist/client/link";
 import "../lib/pokemon";
 import { findEvolutionChainArray, findTypesInformation, getPokemonImages } from "../lib/pokemon";
 import SingularPokeCard from "../components/singularCard";
+import { getTypeRelations } from "../lib/pokemon";
 
 
 export async function getStaticPaths() {
@@ -34,6 +35,7 @@ export async function getStaticProps({ params }) {
   const evolutionChainPokemons = await findEvolutionChainArray(evolution);
   const types = await findTypesInformation(pokemon.types);
 
+  console.log(getTypeRelations(types));
 
   const pokemonImages = await getPokemonImages(evolutionChainPokemons); 
 
