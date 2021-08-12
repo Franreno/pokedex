@@ -1,12 +1,14 @@
-import Head from 'next/head';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../components/layout';
 import Search from '../components/search';
 import Image from "next/image";
 import Card from '../components/card';
 import Grid from '../components/basic-grid';
+import Navbar from '../components/navbar';
+import Welcome from '../components/welcome';
 
 export async function getStaticProps(context) {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=200`);
@@ -26,28 +28,28 @@ export async function getStaticProps(context) {
 
 export default function Home({pokemons}) {
   return (
-    <Layout>
-      <Head>
-        <title>Pokedex</title>
-      </Head>
+    <>
+      <Welcome/>
+      <Layout>
+        <Head>
+          <title>Pokedex</title>
+        </Head>
 
-      <main>
+        <main>
+          <Navbar/>
+        </main>
 
-        <Search/>
-
-      </main>
-
-      <section>        
-        <h1>POKEMONS</h1>
-        <Grid>
-          {pokemons.map(pokemon => (
-              <Card pokemon={pokemon}/>
-          ))}
-        </Grid>
-      </section>
-
-    </Layout>
-
-
+        <br></br>
+        <section>        
+          <h1>POKEMONS</h1>
+          <Grid>
+            {pokemons.map(pokemon => (
+                <Card pokemon={pokemon}/>
+            ))}
+          </Grid>
+        </section>
+              
+      </Layout>
+    </>
   )
 }
