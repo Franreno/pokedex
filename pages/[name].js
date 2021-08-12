@@ -49,9 +49,9 @@ export async function getStaticProps({ params }) {
 const Detalhes = (props) => {
 
   return (
-    <div>
+    <Layout>
         <SingularPokeCard props={props}/>
-    </div>
+    </Layout>
   );
 }
 

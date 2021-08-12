@@ -6,7 +6,6 @@ import Layout from '../components/layout';
 import Search from '../components/search';
 import Image from "next/image";
 import Card from '../components/card';
-import Grid from '../components/basic-grid';
 import Navbar from '../components/navbar';
 import Welcome from '../components/welcome';
 
@@ -26,29 +25,29 @@ export async function getStaticProps(context) {
 
 }
 
-export default function Home({pokemons}) {
+export default function Home({ pokemons }) {
   return (
     <>
-      <Welcome/>
+      <Welcome />
       <Layout>
         <Head>
           <title>Pokedex</title>
         </Head>
 
         <main>
-          <Navbar/>
+          <Navbar />
         </main>
 
         <br></br>
-        <section>        
+        <section>
           <h1>POKEMONS</h1>
-          <Grid>
+          <div className="mainPageGrid">
             {pokemons.map(pokemon => (
-                <Card pokemon={pokemon}/>
+              <Card pokemon={pokemon} />
             ))}
-          </Grid>
+          </div>
         </section>
-              
+
       </Layout>
     </>
   )

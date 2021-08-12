@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from './singularCard.module.css'
-import Grid from "./basic-grid";
 
 export default function SingularPokeCard({ props }) {
 
@@ -30,7 +29,7 @@ export default function SingularPokeCard({ props }) {
             
             
             <p>Evoluções: </p>
-            <Grid className={styles.evGrid}>
+            <div className={styles.evGrid}>
             {evolutionChainPokemons.map((_pokemon, index) => (
                 <div className={styles.EvolutionCard}>
                     <Link href={'/' + _pokemon.name}>
@@ -43,7 +42,7 @@ export default function SingularPokeCard({ props }) {
                     </Link>
                 </div>
             ))}
-            </Grid>
+            </div>
 
             <Link href="/">
                 <button>

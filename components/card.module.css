@@ -7,7 +7,7 @@
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-    border-radius: 4px;
+    border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
     height: 22rem;
@@ -32,9 +32,11 @@
 
 }
 
-.img {
-    height: 150;
-    width: 150;
+.cardTipos{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 .nome {
