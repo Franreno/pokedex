@@ -1,0 +1,39 @@
+.imageBackground{
+    background-color: white;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+
+}
+.name {
+    text-transform: capitalize; 
+    color: black;
+    
+}
+
+.mainPokeImg {
+    justify-content: center;
+    background-color: white;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+
+.EvolutionCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: lightcyan;
+    font-size: 1rem;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border-radius: 15px;
+    transition: all 500ms;
+    overflow: hidden;
+    height: 12rem;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}

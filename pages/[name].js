@@ -2,7 +2,8 @@ import Image from "next/image";
 import Layout from '../components/layout';
 import Link from "next/dist/client/link";
 import "../lib/pokemon";
-import { findEvolutionChainArray, findTypesInformation } from "../lib/pokemon";
+import { findEvolutionChainArray, findTypesInformation, getPokemonImages } from "../lib/pokemon";
+import SingularPokeCard from "../components/singularCard";
 
 
 export async function getStaticPaths() {
@@ -33,8 +34,11 @@ export async function getStaticProps({ params }) {
   const evolutionChainPokemons = await findEvolutionChainArray(evolution);
   const types = await findTypesInformation(pokemon.types);
 
+
+  const pokemonImages = await getPokemonImages(evolutionChainPokemons); 
+
   return {
-    props: { types: types, evolutionChainPokemons: evolutionChainPokemons, pokemon: pokemon }
+    props: { types: types, evolutionChainPokemons: evolutionChainPokemons, pokemon: pokemon, pokemonImages: pokemonImages }
 
   }
 
@@ -43,36 +47,11 @@ export async function getStaticProps({ params }) {
 }
 
 const Detalhes = (props) => {
+
   return (
-    <Layout>
-      <div>
-        <h1>{props.pokemon.name}</h1>
-        <p>Tipo: {props.types.map(type => {
-          return (type.name + ' ');
-        })}</p>
-        <p>Peso: {props.pokemon.weight}</p>
-        <p>Altura: {props.pokemon.height}</p>
-        <Image src={props.pokemon.sprites.front_default} width={200} height={200}></Image>
-        <p>Evoluções: </p>
-        {props.evolutionChainPokemons.map(pokemon => (
-          <div>
-            <Link href={'/' + pokemon.name}>
-              <a>
-                <h3>{pokemon.name + ' '}</h3>
-              </a>
-            </Link>
-
-          </div>
-        ))}
-
-        <Link href="/">
-          <button>
-            <a>voltar</a>
-          </button>
-          
-        </Link>
-      </div>
-    </Layout>
+    <div>
+        <SingularPokeCard props={props}/>
+    </div>
   );
 }
 
