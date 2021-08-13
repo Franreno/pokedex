@@ -10,7 +10,7 @@ import Navbar from '../components/navbar';
 import Welcome from '../components/welcome';
 
 export async function getStaticProps(context) {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=100`); //MUDAR ANTES DE DAR PUSH
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=898`); 
   const { results } = await res.json();
   const pokemons = results.map((result, index) => {
     const paddedId = ('00' + (index + 1)).slice(-3);

@@ -9,13 +9,14 @@ export default function Portrait({ pokemon }) {
     const { name } = pokemon
     const { result, error } = getOnePokemon(name);
 
+    if (error) return <h1>Erro</h1>
+    if (!result) return <Image src={'/public/images/pokeball_loading.gif'} width={200} height={100}/>
+    
     const icons = getIcons();
 
     const mainType = result.types[0].type.name
 
 
-    if (error) return <h1>Erro</h1>
-    if (!result) return <h1>Loading...</h1>
 
 
     return (
