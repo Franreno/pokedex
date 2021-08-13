@@ -35,8 +35,6 @@ export async function getStaticProps({ params }) {
   const evolutionChainPokemons = await findEvolutionChainArray(evolution);
   const types = await findTypesInformation(pokemon.types);
 
-  console.log(getTypeRelations(types));
-
   const pokemonImages = await getPokemonImages(evolutionChainPokemons); 
 
   return {
