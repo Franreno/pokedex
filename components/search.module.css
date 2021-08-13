@@ -12,7 +12,7 @@
     border: 2px solid white;
     background-color:  black;
     height: 3rem;
-    border-radius: 2rem;
+    border-radius: 0.7rem;
     padding: 0rem 0rem 0rem 1rem;
     width: 50%;
     transition: all 500ms;
@@ -53,11 +53,11 @@
     cursor: pointer;
     color: white;
     float: right;
-    border: 2px solid white;
-    width: 4rem;
+    border: 1px solid white;
+    width: 6rem;
     margin-right: 0;
     height: 3rem;
-    border-radius: 0rem 2rem 2rem 0rem;
+    border-radius: 0rem 0.7rem 0.7rem 0rem;
     background: black;
     display: flex;
     font-size: 0.85rem;
@@ -67,6 +67,6 @@
 
 .searchButton:hover {
     transition: 0.3s;;
-    background: rgb(255, 255, 255);
+    background: rgb(253, 236, 0);
     color: black;
 }
