@@ -32,10 +32,12 @@ export async function getStaticProps({ params }) {
   let resEvolution = await fetch(specie.evolution_chain.url);
   const evolution = await resEvolution.json();
 
-  const evolutionChainPokemons = await findEvolutionChainArray(evolution);
+  let evolutionChainPokemons = [];
+  await findEvolutionChainArray(evolution.chain, evolutionChainPokemons);
+  console.log(evolutionChainPokemons);
   const types = await findTypesInformation(pokemon.types);
-
   const pokemonImages = await getPokemonImages(evolutionChainPokemons); 
+  
 
   return {
     props: { types: types, evolutionChainPokemons: evolutionChainPokemons, pokemon: pokemon, pokemonImages: pokemonImages }
