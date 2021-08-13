@@ -5,6 +5,68 @@
     align-items: baseline;
 }
 
-.searchBar>* {
-    margin: 5rem;
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    background-color:  black;
+    height: 3rem;
+    border-radius: 0.7rem;
+    padding: 0rem 0rem 0rem 1rem;
+    width: 50%;
+    transition: all 500ms;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.searchBox:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.025);
+ 
+}
+
+.inputBox {
+    width: 75%;
+}
+
+.buttonBox {
+    width: 25%;
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 0.85rem;
+    transition: 0.4s;
+    width: 100%;
+}
+
+.searchButton{
+    cursor: pointer;
+    color: white;
+    float: right;
+    border: 1px solid white;
+    width: 6rem;
+    margin-right: 0;
+    height: 3rem;
+    border-radius: 0rem 0.7rem 0.7rem 0rem;
+    background: black;
+    display: flex;
+    font-size: 0.85rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchButton:hover {
+    transition: 0.3s;;
+    background: rgb(253, 236, 0);
+    color: black;
 }
