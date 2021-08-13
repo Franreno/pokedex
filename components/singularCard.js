@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from './singularCard.module.css'
 import getIcons from '../lib/typeIcons'
-
+import StatsTeste from "./statsChart";
 
 export default function SingularPokeCard({ props }) {
 
@@ -24,23 +24,34 @@ export default function SingularPokeCard({ props }) {
         let ret = []
         relations.map(relation => {
             if (type === "weak") {
-                if (relation.mult === 2) {
-                    ret.push(relation.name)
+                if (relation.mult === 2 || relation.mult === 4) {
+                    ret.push([relation.name, relation.mult])
                 }
             }
 
             if (type === "strong") {
-                if (relation.mult === 0.5) {
-                    ret.push(relation.name)
+                if (relation.mult === 0.5 || relation.mult === 0.25) {
+                    ret.push([relation.name, relation.mult])
                 }
             }
+
+            if (type === "immune") {
+                if (relation.mult === 0) {
+                    ret.push([relation.name, relation.mult])
+                }
+            }
+
         })
+
+        if (ret.length === 0) {
+            ret.push(["nenhum"])
+        }
 
         return ret;
     }
     const weakRelations = filterWeaknessAndStrong("weak", typeRelations);
     const strongRelations = filterWeaknessAndStrong("strong", typeRelations);
-
+    const immuneRelations = filterWeaknessAndStrong("immune", typeRelations);
 
     return (
         <div className={styles.mainDiv}>
@@ -103,49 +114,84 @@ export default function SingularPokeCard({ props }) {
 
                 {/* Inicio stats */}
                 <div className={styles.stats}>
-                    <h3>Stats</h3>
-                    <div>
-                        {pokemon.stats.map((_stat) => {
-                            return (
-                                <div>
-                                    <p>{_stat.stat.name} {_stat.base_stat}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
+                    <StatsTeste stats={pokemon.stats}/>
                 </div>
                 {/* Fim stats */}
 
                 {/* Inicio Relations */}
-                <div className={styles.weakness}>
+                <div className={styles.relations}>
 
                     {/* Inicio Weakness */}
                     <h3>Fraco contra</h3>
                     <div className={styles.weaknessGrid}>
                         {weakRelations.map((relation) => {
+                            if (relation[0] === "nenhum") {
+                                return (
+                                    <div className={styles.singularNone}>
+                                        <p>{relation[0]}</p>
+                                    </div>
+                                )
+                            }
                             return (
                                 <div className={styles.singularWeakness}>
-                                    <img src={icons[relation]} width={25} height={25} />
-                                    <p>{relation}</p>
+                                    <img src={icons[relation[0]]} width={25} height={25} />
+                                    <p>{relation[0]}</p>
+                                    <p className={styles.relationsMult}>{`${relation[1]}x`}</p>
                                 </div>
                             )
                         })}
                     </div>
                     {/* Fim Weakness */}
 
+
+                    {/* Inicio Immune */}
+                    <h3>Imune contra</h3>
+                    <div className={styles.weaknessGrid}>
+                        {immuneRelations.map((relation) => {
+
+                            if (relation[0] === "nenhum") {
+                                return (
+                                    <div className={styles.singularNone}>
+                                        <p>{relation[0]}</p>
+                                    </div>
+                                )
+                            }
+                            
+                            
+                            return (
+                                <div className={styles.singularImmune}>
+                                    <img src={icons[relation[0]]} width={25} height={25} />
+                                    <p>{relation[0]}</p>
+                                    <p className={styles.relationsMult}>{`${relation[1]}x`}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    {/* Fim Immune */}
+
+
                     {/* Inicio strongness */}
                     <h3>Forte contra</h3>
                     <div className={styles.weaknessGrid}>
                         {strongRelations.map((relation) => {
+                            if (relation[0] === "nenhum") {
+                                return (
+                                    <div className={styles.singularNone}>
+                                        <p>{relation[0]}</p>
+                                    </div>
+                                )
+                            }
                             return (
                                 <div className={styles.singularstrongness}>
-                                    <img src={icons[relation]} width={25} height={25} />
-                                    <p>{relation}</p>
+                                    <img src={icons[relation[0]]} width={25} height={25} />
+                                    <p>{relation[0]}</p>
+                                    <p className={styles.relationsMult}>{`${relation[1]}x`}</p>
                                 </div>
                             )
                         })}
                     </div>
                     {/* Fim strongness */}
+
                 </div>
                 {/* Fim Relations */}
 
@@ -169,11 +215,13 @@ export default function SingularPokeCard({ props }) {
                 ))}
             </div>
 
+            <div className={styles.buttonDiv}>
             <Link href="/">
-                <button>
-                    <a>voltar</a>
+                <button className={styles.backButton}>
+                    <p style={{color: "white"}}>Voltar</p>
                 </button>
             </Link>
+            </div>
 
         </div>
     )
