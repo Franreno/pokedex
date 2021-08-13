@@ -18,6 +18,10 @@ h1 {
   font-size: 3rem;
 }
 
+h1::first-letter {
+  text-transform:capitalize;
+}
+
 a {
   color: #0070f3;
   text-decoration: none;
