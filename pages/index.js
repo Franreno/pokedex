@@ -31,6 +31,7 @@ export default function Home({ pokemons }) {
       <Welcome />
       <Layout>
         <Head>
+          <link rel="icon" href="/images/favicon.ico"></link>
           <title>Pokedex</title>
         </Head>
 
