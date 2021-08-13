@@ -1,11 +1,14 @@
 import styles from './navbar.module.css'
 import Image from "next/image";
 import Logotipo from "../public/images/logotipoPokedex.svg"
-import Search from '../components/search';
 
-export default function Navbar() {
+export default function Navbar({isSingular}) {
+
+    let type
+    isSingular ? type="singularNav" : type="topNav";
+
     return (
-        <div className = {styles.topnav}>
+        <div className = { styles[type] }>
             <div className = {styles.portrait}>
                 <Image 
                     src = {Logotipo}

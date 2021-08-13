@@ -2,10 +2,9 @@ import Image from "next/image";
 import Layout from '../components/layout';
 import Link from "next/dist/client/link";
 import "../lib/pokemon";
-import { findEvolutionChainArray, findTypesInformation, getPokemonImages } from "../lib/pokemon";
+import { findEvolutionChainArray, findTypesInformation, getPokemonImages, getTypeRelations } from "../lib/pokemon";
 import SingularPokeCard from "../components/singularCard";
-import { getTypeRelations } from "../lib/pokemon";
-
+import Navbar from "../components/navbar";
 
 export async function getStaticPaths() {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=898`);
@@ -36,22 +35,21 @@ export async function getStaticProps({ params }) {
   const types = await findTypesInformation(pokemon.types);
 
   const pokemonImages = await getPokemonImages(evolutionChainPokemons); 
+  const typeRelations = getTypeRelations(types);
 
   return {
-    props: { types: types, evolutionChainPokemons: evolutionChainPokemons, pokemon: pokemon, pokemonImages: pokemonImages }
+    props: { types: types, evolutionChainPokemons: evolutionChainPokemons, pokemon: pokemon, pokemonImages: pokemonImages, typeRelations: typeRelations }
 
   }
-
-
-
 }
 
 const Detalhes = (props) => {
 
   return (
-    <Layout>
+    <div>
+        <Navbar isSingular={true}/>
         <SingularPokeCard props={props}/>
-    </Layout>
+    </div>
   );
 }
 

@@ -40,7 +40,7 @@ export default function Home({ pokemons }) {
 
         <br></br>
         <section>
-          <h1>POKEMONS</h1>
+          <h1>Pokemons</h1>
           <div className="mainPageGrid">
             {pokemons.map(pokemon => (
               <Card pokemon={pokemon} />
