@@ -39,9 +39,7 @@ export default function SingularPokeCard({ props }) {
         return ret;
     }
     const weakRelations = filterWeaknessAndStrong("weak", typeRelations);
-    console.log(weakRelations)
     const strongRelations = filterWeaknessAndStrong("strong", typeRelations);
-    console.log(strongRelations)
 
 
     return (
