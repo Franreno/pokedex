@@ -11,6 +11,8 @@ export default function Portrait({ pokemon }) {
 
     const icons = getIcons();
 
+    const mainType = result.types[0].type.name
+
 
     if (error) return <h1>Erro</h1>
     if (!result) return <h1>Loading...</h1>
@@ -18,7 +20,7 @@ export default function Portrait({ pokemon }) {
 
     return (
         <Link key={pokemon.name} href={'/' + pokemon.name}>
-            <div className={styles.card}>
+            <div className={styles[mainType]}>
                 <div className={styles.imageBackground}>
                     <Image src={pokemon.image} width={150} height={150} className={styles.img} />
                 </div>

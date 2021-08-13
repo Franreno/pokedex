@@ -57,7 +57,7 @@ export default function SingularPokeCard({ props }) {
         <div className={styles.mainDiv}>
 
             <div className={styles.mainTitle}>
-                <h1 className={styles.title}>{pokemon.name}</h1>
+                <h1 className={styles.title}>{`#${pokemon.id} ${pokemon.name}`}</h1>
                 {types.map((type) => {
                     return (
                         <div>
