@@ -10,7 +10,7 @@ import Navbar from '../components/navbar';
 import Welcome from '../components/welcome';
 
 export async function getStaticProps(context) {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=898`);
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=100`); //MUDAR ANTES DE DAR PUSH
   const { results } = await res.json();
   const pokemons = results.map((result, index) => {
     const paddedId = ('00' + (index + 1)).slice(-3);
@@ -41,7 +41,7 @@ export default function Home({ pokemons }) {
 
         <br></br>
         <section>
-          <h1>Pokemons</h1>
+          <h1 style={{color: "black"}}>Pokemons</h1>
           <div className="mainPageGrid">
             {pokemons.map(pokemon => (
               <Card pokemon={pokemon} />

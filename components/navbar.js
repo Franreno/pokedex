@@ -14,11 +14,10 @@ export default function Navbar({isSingular}) {
                     src = {Logotipo}
                     className = {styles.img}
                     alt = "Picture of Logotipo"
-                    width = {150}
-                    height = {150}
+                    width = {80}
+                    height = {80}
                 />
             </div>
-            
         </div>
     )
 }
