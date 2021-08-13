@@ -7,6 +7,7 @@ export default function Welcome() {
         <div className={styles.containerWelcome}>
             <div className = {styles.row}>
                <div className = {styles.col}>
+                    <h1 className = {styles.title}>PESQUISE SEU POKEMON!</h1>
                     <Search/>
                </div>
             </div>       

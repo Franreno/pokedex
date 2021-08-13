@@ -26,14 +26,21 @@ export default function Search() {
 
     return (
         <div className={styles.searchBar}>
-            <TextField 
-                color="primary"
-                id="standard-basic"
-                label="Nome do Pokemon" 
-                onChange={handleTextChange} 
-                onKeyPress={handleEnterPress} 
-            />
-            <Button variant="contained" onClick={GoToPokemonPage} className={styles.Button} >Search</Button>
+            
+            <div className={styles.searchBox}>
+                <div className = {styles.inputBox}>
+                    <input 
+                        type="text"
+                        className={styles.searchInput}
+                        placeholder="Nome do Pokemon" 
+                        onChange={handleTextChange} 
+                        onKeyPress={handleEnterPress} 
+                    /> 
+                </div>
+                <div className = {styles.buttonBox}>
+                    <button onClick={GoToPokemonPage} className={styles.searchButton}> Search </button>
+                </div>
+            </div>
         </div>
     )
 }
