@@ -9,15 +9,17 @@ export default function Navbar({isSingular}) {
 
     return (
         <div className = { styles[type] }>
-            <div className = {styles.portrait}>
-                <Image 
-                    src = {Logotipo}
-                    className = {styles.img}
-                    alt = "Picture of Logotipo"
-                    width = {80}
-                    height = {80}
-                />
-            </div>
+            <a href="/">
+                <div className = {styles.portrait}>
+                    <Image 
+                        src = {Logotipo}
+                        className = {styles.img}
+                        alt = "Picture of Logotipo"
+                        width = {80}
+                        height = {80}
+                    />
+                </div>
+            </a>
         </div>
     )
 }
