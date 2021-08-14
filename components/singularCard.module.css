@@ -2,7 +2,7 @@
     text-align: center;
     background-image: 
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-        url(../public/images/welcomeImage.png);
+        url(/images/gameBackground.png);
 }
 
 .mainTitle {

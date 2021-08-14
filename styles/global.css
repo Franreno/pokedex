@@ -1,6 +1,9 @@
 html,
 body {
-  background-color: #e6e6e6;
+  background-image: 
+  linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.55)), 
+  url(/images/gameBackground.png);
+  background-size: contain;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
