@@ -1,17 +1,19 @@
 import styles from './card.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import getOnePokemon from '../pages/api/getSingularPoke'
 import getIcons from '../lib/typeIcons'
+import useFetchPokemon from '../pages/api/useRequest'
 
 export default function Portrait({ pokemon }) {
 
     const { name } = pokemon
-    const { result, error } = getOnePokemon(name);
+    const { result, error } = useFetchPokemon(name);
 
-    if (error) return <h1>Erro</h1>
-    if (!result) return <Image src={'/public/images/pokeball_loading.gif'} width={200} height={100}/>
     
+    if (error) return <h1>Erro</h1>
+    if (!result) return <Image src={'/images/pokeball_loading.gif'} width={50} height={50}/>
+    
+
     const icons = getIcons();
 
     const mainType = result.types[0].type.name
