@@ -67,8 +67,7 @@ export default function Home() {
 
 
         <section>
-          <h1 style={{ color: "black" }}>Pokemons</h1>
-
+          <h1 style={{ color: "white" }}>Pokemons</h1>
           <InfiniteScroll
             loadMore={() => setSize(size + 1)}
             hasMore={!isLoadingMore && !isReachingEnd}

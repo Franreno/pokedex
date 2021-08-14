@@ -1,12 +1,13 @@
- .bug {
+.bug {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #6AD600;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -17,7 +18,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
- }
+}
 
 .bug:hover {
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
@@ -30,10 +31,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #5D4F66;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -57,10 +59,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #005ECC;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -84,10 +87,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #FDDB00;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -111,10 +115,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #FF52EC;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -138,10 +143,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #F10066;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -165,10 +171,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #FF9033;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -192,10 +199,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #88A5E5;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -219,10 +227,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #4D5BB4;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -246,10 +255,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #00D34A;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -267,15 +277,17 @@
     transform: translateY(-3px) scale(1.025);
     background-color: #00D34A;
 }
+
 .ground {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #F56126;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -293,15 +305,17 @@
     transform: translateY(-3px) scale(1.025);
     background-color: #F56126;
 }
+
 .ice {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #00DDC2;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -325,10 +339,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #919BA3;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -347,15 +362,17 @@
     transform: translateY(-3px) scale(1.025);
     background-color: #919BA3;
 }
+
 .poison {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #C42BD0;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -380,10 +397,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #FF2F72;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -407,10 +425,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #CABB85;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -434,10 +453,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #4F90A4;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
@@ -461,10 +481,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EBE875;
+    background: #e0e0e0;
     font-size: 1rem;
     color: rgb(238, 227, 227);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border: 0.25rem solid #1F8ADF;
     border-radius: 10px;
     transition: all 500ms;
     overflow: hidden;
