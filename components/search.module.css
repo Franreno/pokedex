@@ -9,10 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
-    background-color:  black;
+    border: 2px solid rgb(0, 0, 0);
+    background-color:  rgb(255, 255, 255);
     height: 3rem;
-    border-radius: 0.7rem;
+    border-radius: 0.3rem;
     padding: 0rem 0rem 0rem 1rem;
     width: 50%;
     transition: all 500ms;
@@ -43,30 +43,32 @@
     outline: none;
     float: left;
     padding: 0;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 0.85rem;
     transition: 0.4s;
     width: 100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .searchButton{
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
     float: right;
-    border: 1px solid white;
+    border: 2px solid rgb(0, 0, 0);
     width: 6rem;
     margin-right: 0;
     height: 3rem;
-    border-radius: 0rem 0.7rem 0.7rem 0rem;
-    background: black;
+    border-radius: 0rem 0.3rem 0.3rem 0rem;
+    background: rgb(255, 255, 255);
     display: flex;
     font-size: 0.85rem;
     justify-content: center;
     align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .searchButton:hover {
     transition: 0.3s;;
-    background: rgb(253, 236, 0);
-    color: black;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
