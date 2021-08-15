@@ -11,7 +11,7 @@ export default function Portrait({ pokemon }) {
 
     
     if (error) return <h1>Erro</h1>
-    if (!result) return <Image src={'/i0mages/pokeball_loading.gif'} width={50} height={50}/>
+    if (!result) return <Image src={'/images/pokeball_loading.gif'} width={50} height={50}/>
     
 
     const icons = getIcons();
