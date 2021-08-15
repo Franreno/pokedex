@@ -240,7 +240,7 @@ export default function SingularPokeCard({ props }) {
                 <div className={styles.buttonDiv}>
                 <Link href="/">
                     <button className={styles.backButton}>
-                        <p style={{color: "white"}}>Voltar</p>
+                        <p>Voltar</p>
                     </button>
                 </Link>
                 </div>
