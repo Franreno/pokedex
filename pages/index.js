@@ -9,10 +9,6 @@ import { useRequestInfinite } from './api/infiniteFetch';
 import { useState } from 'react';
 
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
-const API_URL = "https://pokeapi.co/api/v2/pokemon";
-
-
 export default function Home() {
 
 
@@ -34,13 +30,11 @@ export default function Home() {
   if (!data) return <Image src={'/images/pokeball_loading.gif'} width={200} height={100} />
 
 
-  // console.log(data)
   let pokemons = undefined;
   let multiplier;
 
   if (data) {
     pokemons = data.map((group, indexOfGroup) => {
-      console.log(indexOfGroup)
       multiplier = indexOfGroup*15;
       return group.map((result, index) => {
         const paddedId = ('00' + ( (index + 1)+multiplier)).slice(-3);

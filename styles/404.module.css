@@ -1,0 +1,50 @@
+.main404div {
+    position: fixed;
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url(../public/images/gameBackground.png);
+
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.main404div>* {
+    color: white;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.backButton {
+    cursor: pointer;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    width: 6rem;
+    height: 3rem;
+    margin: 15px;
+    color: black;
+    background: white;
+    border: 1px solid white;
+    border-radius: 0.7rem;
+    
+    display: flex;
+    
+    font-size: 0.85rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.backButton:hover {
+    transition: 0.5s;
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.025);
+    background-color: black;
+    color: white;
+}
