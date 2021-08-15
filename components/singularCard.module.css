@@ -45,28 +45,69 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(173, 216, 230);
+    background: #e0e0e0;
     border-radius: 15px;
     margin: 15px;
-    width: 45%;
+    width: auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    text-transform: capitalize;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.boxTitle {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.titleDiv {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    
+}
+
+.boxHr {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.underLineTitle {
+    width: 75%;
+    height: 0.75vh;
+    background-color: black;
+    border-radius: 50%;
 }
 
 .height {
-    background-color: rgb(148, 213, 235);
+    background-color: rgb(255, 255, 255);
     width: 75px;
     border-radius: 15px;
     margin: 10px;
 }
 
 .weight {
-    background-color: rgb(150, 197, 212);
+    background-color: rgb(192, 192, 192);
     width: 75px;
     border-radius: 15px;
     margin: 10px;
 }
 
 .abilities {
-    background-color: rgb(134, 225, 255);
+    background-color: rgb(255, 255, 255);
     width: 150px;
     border-radius: 15px;
     margin: 10px;
@@ -112,6 +153,7 @@
     width: 150px;
     height: 35px;
     border-radius: 10px;
+    border: 2px solid white;
 
     align-items: center;
     justify-content: space-evenly;
@@ -125,6 +167,7 @@
     width: 150px;
     height: 35px;
     border-radius: 10px;
+    border: 2px solid white;
 
     align-items: center;
     justify-content: space-evenly;
@@ -138,6 +181,7 @@
     width: 150px;
     height: 35px;
     border-radius: 10px;
+    border: 2px solid white;
 
     align-items: center;
     justify-content: space-evenly;
@@ -151,6 +195,7 @@
     width: 150px;
     height: 35px;
     border-radius: 10px;
+    border: 2px solid white;
 
     align-items: center;
     justify-content: space-evenly;   
@@ -184,7 +229,7 @@
     cursor: pointer;
     
     
-    background: lightcyan;
+    background: #e0e0e0;
     
     font-size: 1rem;
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
@@ -205,7 +250,7 @@
 .EvolutionCard:hover {
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
     transform: translateY(-3px) scale(1.025);
-    background-color: lightcyan;
+    background-color: rgb(168, 168, 168);
 }
 
 
@@ -238,4 +283,8 @@
     font-size: 0.85rem;
     justify-content: center;
     align-items: center;
+}
+
+.name {
+    text-transform: capitalize;
 }

@@ -1,13 +1,12 @@
 html,
 body {
   background-image: 
-  linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.55)), 
+  linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.40)), 
   url(/images/gameBackground.png);
   background-size: contain;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   line-height: 1.6;
   font-size: 18px;
 }
@@ -22,7 +21,7 @@ h1 {
 }
 
 h1::first-letter {
-  text-transform:capitalize;
+  text-transform: capitalize;
 }
 
 a {
