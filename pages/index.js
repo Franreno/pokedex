@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
-import Image from "next/image";
 import Card from '../components/card';
 import Navbar from '../components/navbar';
 import Welcome from '../components/welcome';
 import InfiniteScroll from "react-infinite-scroller";
 import { useRequestInfinite } from './api/infiniteFetch';
 import { useState } from 'react';
-
+import styles from '../styles/index.module.css'
 
 export default function Home() {
 
@@ -27,7 +26,7 @@ export default function Home() {
 
 
   if (error) return <h1>Erro</h1>
-  if (!data) return <Image src={'/images/pokeball_loading.gif'} width={200} height={100} />
+  if (!data) return <img src={'/images/pokeball_loading.gif'} className={styles.loadingImg} />
 
 
   let pokemons = undefined;

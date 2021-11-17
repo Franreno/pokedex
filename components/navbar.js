@@ -1,6 +1,4 @@
 import styles from './navbar.module.css'
-import Image from "next/image";
-import Logotipo from "../public/images/logotipoPokedex.svg"
 
 export default function Navbar({isSingular}) {
 
@@ -11,12 +9,9 @@ export default function Navbar({isSingular}) {
         <div className = { styles[type] }>
             <a href="/">
                 <div className = {styles.portrait}>
-                    <Image 
-                        src = {Logotipo}
+                    <img 
+                        src = {"/images/logotipoPokedex.svg"}
                         className = {styles.img}
-                        alt = "Picture of Logotipo"
-                        width = {80}
-                        height = {80}
                     />
                 </div>
             </a>

@@ -1,6 +1,5 @@
 import styles from './card.module.css'
 import Link from 'next/link'
-import Image from 'next/image'
 import getIcons from '../lib/typeIcons'
 import useFetchPokemon from '../pages/api/useRequest'
 
@@ -11,7 +10,7 @@ export default function Portrait({ pokemon }) {
 
     
     if (error) return <h1>Erro</h1>
-    if (!result) return <Image src={'/images/pokeball_loading.gif'} width={50} height={50}/>
+    if (!result) return <img src={'/images/pokeball_loading.gif'} className={styles.iconImg}/>
     
 
     const icons = getIcons();
@@ -22,12 +21,12 @@ export default function Portrait({ pokemon }) {
         <Link key={pokemon.name} href={'/' + pokemon.name}>
             <div className={styles[mainType]}>
                 <div className={styles.imageBackground}>
-                    <Image src={pokemon.image} width={150} height={150} className={styles.img} />
+                    <img src={pokemon.image} className={styles.img}/>
                 </div>
                 <h3 className={styles.nome}>{pokemon.name}</h3>
                 <div className={styles.cardTipos}>
                     {result.types.map((poke) => 
-                        <Image src={icons[poke.type.name]} width={50} height={50} />
+                        <img src={icons[poke.type.name]} className={styles.iconImg}/>
                     )}
                 </div>
             </div>

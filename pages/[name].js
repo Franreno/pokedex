@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Layout from '../components/layout';
-import Link from "next/dist/client/link";
 import "../lib/pokemon";
 import { findEvolutionChainArray, findTypesInformation, getPokemonImages, getTypeRelations } from "../lib/pokemon";
 import SingularPokeCard from "../components/singularCard";

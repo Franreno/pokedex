@@ -1,6 +1,5 @@
 import styles from '../styles/404.module.css'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import Search from '../components/search'
 
@@ -15,7 +14,7 @@ export default function page404() {
             </Head>
 
 
-            <Image src={"/images/surprisedPikachu.png"} width={250} height={250} />
+            <img src={"/images/surprisedPikachu.png"} className={styles.surprisedPikachuImg}/>
             <h1>Pokemon não encontrado.</h1>
 
             <Search />

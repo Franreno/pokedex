@@ -33,6 +33,11 @@
     margin: 15px;
 }
 
+.mainPokemonImage {
+    width: 215px;
+    height: 215px;
+}
+
 .mainPokeImgBackground {
     background-color: white;
     width: 12rem;
@@ -253,6 +258,10 @@
     background-color: rgb(168, 168, 168);
 }
 
+.evolutionChainPokeImg {
+    width: 150px;
+    height: 125px;
+}
 
 .imageBackground{
     background-color: white;

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from './singularCard.module.css'
 import getIcons from '../lib/typeIcons'
 import StatsTeste from "./statsChart";
@@ -85,7 +84,7 @@ export default function SingularPokeCard({ props }) {
                     {/* Imagem principal do pokemon */}
                     <div className={styles.mainPokeImg}>
                         <div className={styles.mainPokeImgBackground}>
-                            <Image src={MainPokemonImage(pokemon.id)} width={215} height={215} />
+                            <img src={MainPokemonImage(pokemon.id)} className={styles.mainPokemonImage}/>
                         </div>
                     </div>
 
@@ -228,7 +227,7 @@ export default function SingularPokeCard({ props }) {
                                 <Link href={'/' + _pokemon.name}>
                                     <div>
                                         <div className={styles.imageBackground}>
-                                            <Image src={pokemonImages[index]} width={150} height={150} />
+                                            <img src={pokemonImages[index]} className={styles.evolutionChainPokeImg}/>
                                         </div>
                                         <h3 className={styles.name}>{_pokemon.name}</h3>
                                     </div>

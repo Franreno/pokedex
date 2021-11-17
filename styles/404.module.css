@@ -16,6 +16,11 @@
     color: white;
 }
 
+.surprisedPikachuImg {
+    width: 250px;
+    height: 250px;
+}
+
 .buttonDiv {
     display: flex;
     flex-flow: row wrap;
