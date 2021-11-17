@@ -14,6 +14,7 @@ export default function Home() {
   const [path, setPath] = useState("/pokemon");
   const [selectedType, setSelectedType] = useState(null);
 
+  const prefix = "/pokedex";
   const {
     data,
     error,
@@ -26,7 +27,7 @@ export default function Home() {
 
 
   if (error) return <h1>Erro</h1>
-  if (!data) return <img src={'/images/pokeball_loading.gif'} className={styles.loadingImg} />
+  if (!data) return <img src={prefix+'/images/pokeball_loading.gif'} className={styles.loadingImg} />
 
 
   let pokemons = undefined;

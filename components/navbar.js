@@ -2,6 +2,8 @@ import styles from './navbar.module.css'
 
 export default function Navbar({isSingular}) {
 
+    const prefix = '/pokedex';
+
     let type
     isSingular ? type="singularNav" : type="topNav";
 
@@ -10,7 +12,7 @@ export default function Navbar({isSingular}) {
             <a href="/">
                 <div className = {styles.portrait}>
                     <img 
-                        src = {"/images/logotipoPokedex.svg"}
+                        src = { prefix + "/images/logotipoPokedex.svg"}
                         className = {styles.img}
                     />
                 </div>

@@ -8,9 +8,10 @@ export default function Portrait({ pokemon }) {
     const { name } = pokemon
     const { result, error } = useFetchPokemon(name);
 
+    const prefix = '/pokedex';
     
     if (error) return <h1>Erro</h1>
-    if (!result) return <img src={'/images/pokeball_loading.gif'} className={styles.iconImg}/>
+    if (!result) return <img src={prefix+'/images/pokeball_loading.gif'} className={styles.iconImg}/>
     
 
     const icons = getIcons();

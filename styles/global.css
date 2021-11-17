@@ -2,7 +2,7 @@ html,
 body {
   background-image: 
   linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.40)), 
-  url(/images/gameBackground.png);
+  url(/pokedex/images/gameBackground.png);
   background-size: contain;
   padding: 0;
   margin: 0;
