@@ -27,7 +27,7 @@ export default function Home() {
 
 
   if (error) return <h1>Erro</h1>
-  if (!data) return <img src={prefix+'/images/pokeball_loading.gif'} className={styles.loadingImg} />
+  if (!data) return <img src={prefix + '/images/pokeball_loading.gif'} className={styles.loadingImg} />
 
 
   let pokemons = undefined;
@@ -35,9 +35,9 @@ export default function Home() {
 
   if (data) {
     pokemons = data.map((group, indexOfGroup) => {
-      multiplier = indexOfGroup*15;
+      multiplier = indexOfGroup * 15;
       return group.map((result, index) => {
-        const paddedId = ('00' + ( (index + 1)+multiplier)).slice(-3);
+        const paddedId = ('00' + ((index + 1) + multiplier)).slice(-3);
         const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
         return { ...result, image };
       })
@@ -51,7 +51,7 @@ export default function Home() {
       <Welcome />
       <Layout>
         <Head>
-          <link rel="icon" href="/images/pokeball.ico"></link>
+          <link rel="shortcut icon" href={prefix + "/images/pokeball.ico"} />
           <title>Pokedex</title>
         </Head>
 
@@ -74,7 +74,7 @@ export default function Home() {
               </h3>
             }
             threshold={500}
-            >
+          >
             <div className="mainPageGrid">
               {pokemons.map(group => (
                 group.map(pokemon => {

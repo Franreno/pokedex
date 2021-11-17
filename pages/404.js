@@ -11,12 +11,12 @@ export default function page404() {
         <div className={styles.main404div}>
 
             <Head>
-                <link rel="icon" href="/images/pokeball.ico"></link>
+                <link rel="shortcut icon" href={prefix + "/images/pokeball.ico"} />
                 <title>Pokedex</title>
             </Head>
 
 
-            <img src={"/pokedex/images/surprisedPikachu.png"} className={styles.surprisedPikachuImg}/>
+            <img src={"/pokedex/images/surprisedPikachu.png"} className={styles.surprisedPikachuImg} />
             <h1>Pokemon não encontrado.</h1>
 
             <Search />
@@ -27,7 +27,7 @@ export default function page404() {
                         <p>Voltar</p>
                     </button>
                 </Link>
-                </div>
+            </div>
 
 
         </div>
