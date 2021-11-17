@@ -5,6 +5,8 @@ import Search from '../components/search'
 
 export default function page404() {
 
+    const prefix = '/pokedex';
+
     return (
         <div className={styles.main404div}>
 
@@ -14,7 +16,7 @@ export default function page404() {
             </Head>
 
 
-            <img src={"/images/surprisedPikachu.png"} className={styles.surprisedPikachuImg}/>
+            <img src={"/pokedex/images/surprisedPikachu.png"} className={styles.surprisedPikachuImg}/>
             <h1>Pokemon não encontrado.</h1>
 
             <Search />

@@ -9,7 +9,7 @@ export default function Navbar({isSingular}) {
 
     return (
         <div className = { styles[type] }>
-            <a href="/">
+            <a href="/pokedex">
                 <div className = {styles.portrait}>
                     <img 
                         src = { prefix + "/images/logotipoPokedex.svg"}

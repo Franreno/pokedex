@@ -2,7 +2,7 @@
     position: fixed;
     background-image: 
     linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-    url(../public/images/gameBackground.png);
+    url(/pokedex/images/gameBackground.png);
 
     display: flex;
     flex-flow: column wrap;
